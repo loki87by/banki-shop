@@ -1,0 +1,30 @@
+footer {
+  position: absolute;
+  top: calc(100vh - 96px);
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #eceaea;
+}
+
+.footer-contacts {
+  width: 496px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: #555;
+}
+
+a::before {
+  content: url("../assets/icons/phone.svg");
+}
+
+h5::before {
+  content: url("../assets/icons/geo.svg");
+}

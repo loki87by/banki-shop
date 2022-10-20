@@ -1,0 +1,106 @@
+@import url("./src/styles/header.css");
+@import url("./src/styles/background.css");
+@import url("./src/styles/main.css");
+@import url("./src/styles/footer.css");
+
+html {
+  max-width: 1920px;
+  min-height: 100vw;
+  padding: 0 352px;
+  margin: auto;
+  box-sizing: border-box;
+  --h1: 24px;
+  --h2: 18px;
+  --h3: 16px;
+  --h4-6: 14px;
+}
+
+body {
+  margin: 0;
+}
+
+#app {
+  position: relative;
+  width: 100%;
+}
+
+h1 {
+  font-size: var(--h1);
+}
+
+h2 {
+  font-size: var(--h2);
+}
+
+h3 {
+  font-size: var(--h3);
+}
+
+h4,
+h5,
+h6 {
+  font-size: var(--h4-6);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: bold;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+  margin: 0;
+  line-height: 1.5;
+}
+
+h6 {
+  font-weight: lighter;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  padding: 13px 36px 14px;
+  border: none;
+  background: #403432;
+  color: #fff;
+}
+
+button:hover {
+  background: #776763;
+}
+
+button:disabled {
+  background: #c1b4b1;
+}
+
+.button_basket {
+  background: #5b3a32;
+}
+
+.button_basket::before {
+  content: url("./src/assets/icons/added.svg");
+}
+
+.navigation {
+  width: 542px;
+  box-sizing: border-box;
+  padding-left: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navigation_footer {
+  width: 545px;
+  color: #555;
+}
