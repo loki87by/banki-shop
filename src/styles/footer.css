@@ -1,15 +1,19 @@
 footer {
-  position: absolute;
-  top: calc(100vh - 96px);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   height: 96px;
+  padding: 0 302px;
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background: #eceaea;
 }
 
-.footer-contacts {
-  width: 496px;
+.footer__contacts {
+  width: 495px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -23,8 +27,23 @@ a:visited {
 
 a::before {
   content: url("../assets/icons/phone.svg");
+  margin-top: 7px;
 }
 
-h5::before {
+.footer__phone,
+.footer__adress {
+  display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 158px;
+}
+
+.footer__adress {
+  width: 288px;
+}
+
+.footer__adress::before {
   content: url("../assets/icons/geo.svg");
+  margin-top: 7px;
+  margin-right: 10px;
 }

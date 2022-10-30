@@ -1,5 +1,6 @@
 main {
   padding-top: 45px;
+  margin-bottom: 128px;
 }
 
 .items {
@@ -8,31 +9,39 @@ main {
   margin-top: 39px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
 }
 
 .item {
   width: 280px;
   height: 328px;
+  margin-right: 32px;
+  border: 1px solid #e1e1e1;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
 }
 
-.item-image {
-  width: 100%;
-  max-height: 160px;
-  margin-bottom: 12px;
+.item:nth-of-type(4n) {
+  margin-right: 0;
 }
 
-.item-container {
+.item__image {
+  width: 100%;
+  height: 160px;
+  min-height: 160px;
+  object-fit: cover;
+}
+
+.item__container {
   width: 100%;
   padding: 24px;
-  padding-top: 20px;
+  padding-top: 4px;
   box-sizing: border-box;
 }
 
-.item-title {
+.item__title {
   max-width: 220px;
   margin-bottom: 22px;
   text-transform: capitalize;
@@ -44,18 +53,65 @@ article {
   justify-content: space-between;
 }
 
-.item-trade {
+.item__trade {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
 }
 
-.item-oldPrice {
+.item__oldPrice {
   color: #a0a0a0;
   text-decoration: line-through;
 }
 
-.item-price {
+.item__price {
   color: #343030;
+}
+
+.item__price-button {
+  max-width: 116px;
+  padding: 13px 28px 14px;
+  box-sizing: border-box;
+}
+
+.item__reserved {
+  width: 118px;
+  max-width: 118px;
+  padding: 14px 9px 13px 11px;
+  background: #5b3a32;
+}
+
+.item__reserved::before {
+  content: url('../assets/icons/inBasket.svg');
+}
+
+.item__saled {
+  opacity: .5;
+}
+
+.preloader{
+	width: 48px;
+	height: 48px;
+  margin: 0;
+	border: 3px solid #1A1B22;
+  box-sizing: border-box;
+	border-bottom-color: #D1D2D6;
+	border-radius: 50%;
+	-webkit-animation: spin .75s infinite linear;
+	        animation: spin .75s infinite linear;
+}
+
+@-webkit-keyframes spin {
+	100% {
+		-webkit-transform: rotate(360deg);
+		        transform: rotate(360deg);
+	}
+}
+
+@keyframes spin {
+	100% {
+		-webkit-transform: rotate(360deg);
+		        transform: rotate(360deg);
+	}
 }

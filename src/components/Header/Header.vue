@@ -1,26 +1,51 @@
 <template>
   <header>
     <ul class="navigation">
-      <li class="navigation-link"><h4>Каталог</h4></li>
-      <li class="navigation-link"><h4>Доставка</h4></li>
-      <li class="navigation-link"><h4>Оплата</h4></li>
-      <li class="navigation-link"><h4>Контакты</h4></li>
-      <li class="navigation-link"><h4>О компании</h4></li>
+      <li
+        class="navigation-link"
+        v-for="(item, index) of nav"
+        :key="index"
+        @click="navigated(item)"
+      >
+        <h4>{{ item.title }}</h4>
+      </li>
     </ul>
-    <div class="header-search">
+    <div class="header__search">
       <input
         type="text"
-        class="header-searchInput"
+        class="header__searchInput"
         placeholder="Поиск по названию картины"
+        @input="filterItems"
       />
-      <button type="button">Найти</button>
+      <button type="button" @click="filterItems">Найти</button>
     </div>
   </header>
 </template>
 
 <script>
+import { debounce } from '../../utils/helpers'
+import { NAVIGATION_LINKS } from '../../utils/consts'
+
 export default {
-  name: 'Header'
+  name: 'Header',
+  props: ['filter', 'navigated'],
+  data: function () {
+    return {
+      inputed: '',
+      nav: NAVIGATION_LINKS
+    }
+  },
+  methods: {
+    filterItems (e) {
+      const text = e.target.value
+      this.inputed = text
+      debounce(this.filter, 1000, text)
+    },
+
+    filterFromButton () {
+      this.filter(this.inputed)
+    }
+  }
 }
 </script>
 
