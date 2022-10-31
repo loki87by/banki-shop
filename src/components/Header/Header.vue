@@ -14,7 +14,7 @@
       <input
         type="text"
         class="header__searchInput"
-        placeholder="Поиск по названию картины"
+        :placeholder="width > 320 ? 'Поиск по названию картины' : 'Поиск'"
         @input="filterItems"
       />
       <button type="button" @click="filterItems">Найти</button>
@@ -28,7 +28,7 @@ import { NAVIGATION_LINKS } from '../../utils/consts'
 
 export default {
   name: 'Header',
-  props: ['filter', 'navigated'],
+  props: ['filter', 'navigated', 'width'],
   data: function () {
     return {
       inputed: '',

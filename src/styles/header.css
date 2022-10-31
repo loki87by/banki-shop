@@ -26,8 +26,49 @@ input {
   border: 1px solid #e1e1e1;
   border-right: none;
   box-sizing: border-box;
-  /*   display: flex;
-  align-items: center; */
   font-size: var(--h4-6);
   line-height: 1.5;
+}
+
+@media (max-width: 1000px) {
+  header {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 528px) {
+  .header__search {
+    height: 36px;
+  }
+
+  .header__searchInput {
+    height: 36px;
+    padding: 7px 0 8px 16px;
+  }
+
+  .header__search > button {
+    padding: 7px 36px 8px;
+  }
+}
+
+@media (max-width: 448px) {
+  .header__search {
+    width: 100%;
+  }
+
+  .header__searchInput {
+    width: 100%;
+    padding-left: 4px;
+  }
+
+  .header__search > button {
+      padding: 7px 12px 8px;
+  }
+}
+
+@media (max-width: 384px) {
+  .header__searchInput {
+    padding-left: 0;
+  }
 }

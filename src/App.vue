@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Header :filter="filter" :navigated="navigated" />
+    <Header :filter="filter" :navigated="navigated" :width="width" />
     <Main
       :items="filteredItems"
       :basket="basket"
@@ -33,7 +33,8 @@ export default {
       filteredItems: ITEMS,
       basket: [],
       addedToBasket: [],
-      openedPopupData: null
+      openedPopupData: null,
+      width: NaN
     }
   },
   components: {
@@ -41,6 +42,12 @@ export default {
     Main,
     Footer,
     Popup
+  },
+  created () {
+    window.addEventListener('resize', this.resizer)
+  },
+  destroyed () {
+    window.removeEventListener('resize', this.resizer)
   },
   methods: {
     filter (arg) {
@@ -107,11 +114,16 @@ export default {
       } else {
         alert('Страница находится на реконструкции. Приносим свои извинения.')
       }
+    },
+
+    resizer () {
+      this.width = document.documentElement.clientWidth
     }
   },
 
   mounted () {
     this.getFromLocalStorage()
+    this.resizer()
   }
 }
 </script>

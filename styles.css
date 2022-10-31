@@ -115,3 +115,63 @@ button:disabled {
   padding-left: 146px;
   color: #555;
 }
+
+@media (max-width: 1800px) {
+  html {
+    max-width: 1280px;
+    padding: 0 36px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .navigation {
+    width: 480px;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 1074px) {
+  .navigation {
+    width: 420px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .navigation {
+    width: 100%;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+}
+
+@media (max-width: 528px) {
+  html {
+    padding: 0 12px;
+  }
+
+  .navigation_footer {
+    margin: 0;
+  }
+}
+
+@media (max-width: 448px) {
+  h1 {
+    font-size: var(--h2);
+  }
+
+  .navigation-link > h4 {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 320px) {
+  .navigation {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .navigation-link {
+    width: max-content;
+    margin: 0 4px;
+  }
+}
