@@ -8,11 +8,14 @@ html {
   position: relative;
   max-width: 1920px;
   min-height: 100vh;
+  height: -webkit-max-content;
+  height: -moz-max-content;
   height: max-content;
   padding: 0 352px;
   margin: auto;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  font-family: 'Merriweather';
+  font-family: "Merriweather";
   background-color: #e5e5e5;
   --h1: 24px;
   --h2: 18px;
@@ -70,7 +73,8 @@ h2 {
   line-height: 1.52;
 }
 
-a, h5 {
+a,
+h5 {
   font-weight: 400;
 }
 
@@ -103,10 +107,17 @@ button:disabled {
 
 .navigation {
   width: 640px;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding-left: 96px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
@@ -166,11 +177,16 @@ button:disabled {
 
 @media (max-width: 320px) {
   .navigation {
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
   }
 
   .navigation-link {
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
     margin: 0 4px;
   }

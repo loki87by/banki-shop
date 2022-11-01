@@ -1,6 +1,3 @@
-Макет: [https://www.figma.com/file/6LxPDEsauEGanhR2nDW68X/Banki.shop?node-id=0%3A1](https://www.figma.com/file/6LxPDEsauEGanhR2nDW68X/Banki.shop?node-id=0%3A1)
-
-
 Технические требования по ТЗ:
 - при выполнении тестового задания использовать VueJS (без использования Vue CLI)
 - можно использовать Bootstrap, jQuery
@@ -31,3 +28,17 @@
 - цена
 - слайдер, содержащий 2-4 изображения
 Дизайн модального окна продумать самостоятельно.
+
+Запуск сборки:
+- git clone https://github.com/loki87by/banki-shop
+- npm install
+- npm run dev
+
+Сборка приложения:
+- git clone https://github.com/loki87by/banki-shop
+- npm install
+- npm run build
+
+Макет: [https://www.figma.com/file/6LxPDEsauEGanhR2nDW68X/Banki.shop?node-id=0%3A1](https://www.figma.com/file/6LxPDEsauEGanhR2nDW68X/Banki.shop?node-id=0%3A1)
+
+Deploy: [https://banki-shop.netlify.app](https://banki-shop.netlify.app)

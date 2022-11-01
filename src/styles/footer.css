@@ -5,17 +5,30 @@ footer {
   width: 100%;
   height: 96px;
   padding: 0 302px;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   background: #eceaea;
 }
 
 .footer__contacts {
   width: 495px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
@@ -32,10 +45,16 @@ a::before {
 
 .footer__phone,
 .footer__adress {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 158px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 158px;
 }
 
 .footer__adress {
@@ -56,7 +75,10 @@ a::before {
 
 @media (max-width: 1000px) {
   footer {
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
   }
 }
@@ -64,7 +86,10 @@ a::before {
 @media (max-width: 528px) {
   footer {
     padding: 0 12px;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
   }
 
@@ -74,21 +99,27 @@ a::before {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
     align-items: flex-end;
   }
 
   .footer__phone {
+    -ms-flex-item-align: start;
     align-self: flex-start;
   }
 }
 
 @media (max-width: 320px) {
   footer {
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
   }
 
   .footer__adress {
     width: 100%;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
 }

@@ -6,7 +6,11 @@
         :class="item.enabled ? 'item' : 'item item__saled'"
         v-for="item of items"
         :key="item.id"
-        @click="(e) => {openPopup(e, item.id)}"
+        @click="
+          e => {
+            openPopup(e, item.id);
+          }
+        "
       >
         <img :src="item.src" :alt="item.title" class="item__image" />
         <div class="item__container">
@@ -45,7 +49,7 @@
             </section>
           </article>
           <article v-else>
-            <h3 :style="{marginTop: '10px'}">Продана на аукционе</h3>
+            <h3 :style="{ marginTop: '10px' }">Продана на аукционе</h3>
           </article>
         </div>
       </div>
